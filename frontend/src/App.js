@@ -16,6 +16,8 @@ import women_banner from './components/Assets/banner_women.png'
 import kid_banner from './components/Assets/banner_kids.png'
 import Payment from './components/Payment/Payment';
 
+const url = 'https://ecommerce-72h2.onrender.com'
+
 
 
 
@@ -28,16 +30,16 @@ const App = () => {
 
       <Routes>
 
-        <Route path='/' element={<Shop/>} />
-        <Route path='/mens' element={<ShopCategory category='men' banner = {men_banner} />} />
-        <Route path='/womens' element={<ShopCategory category='women' banner = {women_banner}/>} />
+        <Route path=`${url}` element={<Shop/>} />
+        <Route path=`${url}/mens` element={<ShopCategory category='men' banner = {men_banner} />} />
+        <Route path=`${url}/womens` element={<ShopCategory category='women' banner = {women_banner}/>} />
         
-        <Route path='/kids' element={<ShopCategory category='kid' banner ={kid_banner}/>}  />
-        <Route path='/product' element={< Product/>} />
-        <Route path='/product/:productId' element={< Product/>} />
-        <Route path='/cart' element={< Cart/>} />
-        <Route path='/login' element={< LoginSignUp/>} />
-        <Route path='/payment' element={<Payment />} />
+        <Route path=`{url}/kids` element={<ShopCategory category='kid' banner ={kid_banner}/>}  />
+        <Route path=`{url}/product` element={< Product/>} />
+        <Route path=`{url}/product/:productId ` element={< Product/>} />
+        <Route path=`{url}/cart` element={< Cart/>} />
+        <Route path=`{url}/login` element={< LoginSignUp/>} />
+        <Route path=`{url}/payment` element={<Payment />} />
 
 
 
